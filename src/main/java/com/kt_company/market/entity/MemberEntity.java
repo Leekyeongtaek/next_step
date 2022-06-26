@@ -4,14 +4,20 @@ import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@NoArgsConstructor
 @Table(name = "member")
 @Entity
 public class MemberEntity {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "mem_seq")
     private Long memSeq;
 
@@ -26,5 +32,12 @@ public class MemberEntity {
 
     @Column(name = "update_date")
     private LocalDateTime updateDate;
+
+    @Builder
+    public MemberEntity(String id, String password) {
+        this.id = id;
+        this.password = password;
+        this.createDate = LocalDateTime.now();
+    }
 
 }
