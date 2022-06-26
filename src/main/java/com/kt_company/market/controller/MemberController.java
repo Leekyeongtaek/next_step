@@ -2,6 +2,8 @@ package com.kt_company.market.controller;
 
 import com.kt_company.market.dto.MemberDto;
 import com.kt_company.market.service.MemberService;
+import java.util.HashMap;
+import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -21,10 +23,15 @@ public class MemberController {
 
     @PostMapping("/create")
     public ResponseEntity<?> joinMember(@ModelAttribute MemberDto memberDto) throws Exception {
-        log.info(memberDto.getId());
-        log.info(memberDto.getPassword());
-        memberService.join(memberDto);
-        return new ResponseEntity<>(HttpStatus.OK);
+        try {
+            memberService.join(memberDto);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            Map<String, Object> result = new HashMap<>();
+            result.put("errorCode", 500);
+            result.put("errorMsg", "회원가입중 오류가 발생했습니다. 관리자에게 연락해주세요.");
+            return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
 }
