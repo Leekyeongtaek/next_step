@@ -52,7 +52,7 @@ dependencies {
 	implementation 'org.json:json:20171018'
 }
 
-tasks.named('test') {
+test {
 	useJUnitPlatform()
 }
 
