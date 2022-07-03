@@ -27,6 +27,12 @@ public class MemberEntity {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "type")
+    private String type;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
     @Column(name = "create_date")
     private LocalDateTime createDate;
 
@@ -34,9 +40,11 @@ public class MemberEntity {
     private LocalDateTime updateDate;
 
     @Builder
-    public MemberEntity(String id, String password) {
+    public MemberEntity(String id, String password, String type, String phoneNumber) {
         this.id = id;
         this.password = password;
+        this.type = type;
+        this.phoneNumber = phoneNumber;
         this.createDate = LocalDateTime.now();
     }
 

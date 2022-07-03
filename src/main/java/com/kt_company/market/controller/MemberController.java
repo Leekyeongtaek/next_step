@@ -29,7 +29,7 @@ public class MemberController {
         } catch (Exception e) {
             Map<String, Object> result = new HashMap<>();
             result.put("errorCode", 500);
-            result.put("errorMsg", "회원가입중 오류가 발생했습니다. 관리자에게 연락해주세요.");
+            result.put("errorMsg", "회원가입 중 오류가 발생 했습니다. 고객센터로 문의해주시기 바랍니다.");
             return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

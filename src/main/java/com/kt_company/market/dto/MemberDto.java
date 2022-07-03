@@ -10,4 +10,6 @@ import lombok.ToString;
 public class MemberDto {
     private String id;
     private String password;
+    private String type;
+    private String phoneNumber;
 }
