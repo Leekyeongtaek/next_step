@@ -1,4 +1,4 @@
-package com.kt_company.market.mapper;
+package com.kt_company.market.mybatis.mapper;
 
 import com.kt_company.market.dto.MemberDto;
 

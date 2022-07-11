@@ -1,4 +1,4 @@
-package com.kt_company.market_mybatis.zigzag.util;
+package com.kt_company.market.mybatis.zigzag.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;

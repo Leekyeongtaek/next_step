@@ -1,7 +1,7 @@
-package com.kt_company.market.service;
+package com.kt_company.market.mybatis.service;
 
 import com.kt_company.market.dto.MemberDto;
-import com.kt_company.market.mapper.MemberMapper;
+import com.kt_company.market.mybatis.mapper.MemberMapper;
 import com.kt_company.market.util.common.StringUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

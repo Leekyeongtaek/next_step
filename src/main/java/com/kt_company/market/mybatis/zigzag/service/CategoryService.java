@@ -1,6 +1,6 @@
-package com.kt_company.market_mybatis.zigzag.service;
+package com.kt_company.market.mybatis.zigzag.service;
 
-import com.kt_company.market_mybatis.zigzag.util.HttpClientZigzag;
+import com.kt_company.market.mybatis.zigzag.util.HttpClientZigzag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
