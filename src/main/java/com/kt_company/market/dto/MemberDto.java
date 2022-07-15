@@ -12,4 +12,8 @@ public class MemberDto {
     private String password;
     private String type;
     private String phoneNumber;
+    private String grade;
+    private String address1;
+    private String address2;
+    private String zipcode;
 }

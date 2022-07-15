@@ -17,7 +17,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Slf4j
 @Configuration
-@MapperScan(basePackages = "com.kt_company.market.mapper")
+@MapperScan(basePackages = "com.kt_company.market.mybatis.mapper")
 @PropertySource("classpath:/application.yml")
 public class DatasourceConfig {
 

@@ -1,8 +1,11 @@
 package com.kt_company.market.entity;
 
+import com.kt_company.market.Grade;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,6 +36,19 @@ public class MemberEntity {
     @Column(name = "phone_number")
     private String phoneNumber;
 
+    @Column(name = "grade")
+//    @Enumerated(EnumType.STRING)
+    private String grade;
+
+    @Column(name = "address1")
+    private String address1;
+
+    @Column(name = "address2")
+    private String address2;
+
+    @Column(name = "zipcode")
+    private String zipcode;
+
     @Column(name = "create_date")
     private LocalDateTime createDate;
 
@@ -40,12 +56,16 @@ public class MemberEntity {
     private LocalDateTime updateDate;
 
     @Builder
-    public MemberEntity(String id, String password, String type, String phoneNumber) {
+    public MemberEntity(String id, String password, String type, String phoneNumber, String grade, String address1, String address2,
+        String zipcode) {
         this.id = id;
         this.password = password;
         this.type = type;
         this.phoneNumber = phoneNumber;
+        this.grade = grade;
+        this.address1 = address1;
+        this.address2 = address2;
+        this.zipcode = zipcode;
         this.createDate = LocalDateTime.now();
     }
-
 }

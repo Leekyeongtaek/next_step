@@ -28,14 +28,17 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.projectlombok:lombok'
 
 	annotationProcessor 'org.projectlombok:lombok'
+
 	//querydsl 추가
 	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 	implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.8'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 	//mybatis 설정.
 	implementation 'mysql:mysql-connector-java'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
