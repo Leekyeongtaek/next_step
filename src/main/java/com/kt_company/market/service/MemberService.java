@@ -23,6 +23,12 @@ public class MemberService {
             MemberEntity member = MemberEntity.builder()
                 .id(memberDto.getId())
                 .password(StringUtil.convertSHA256(memberDto.getPassword()))
+                .phoneNumber(memberDto.getPhoneNumber())
+                .grade(memberDto.getGrade())
+                .type(memberDto.getType())
+                .address1(memberDto.getAddress1())
+                .address2(memberDto.getAddress2())
+                .zipcode(memberDto.getZipcode())
                 .build();
 
             memberRepository.save(member);
